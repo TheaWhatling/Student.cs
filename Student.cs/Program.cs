@@ -25,7 +25,7 @@ namespace Student.cs
                 v.learn(1);
             }
 
-            Console.WriteLine(v.getName() + "  " + v.predictedGrade());
+            //Console.WriteLine(v.getName() + "  " + v.predictedGrade());
         }
     }
 }
