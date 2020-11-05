@@ -11,17 +11,22 @@ namespace Student.cs
             //v = new Student();
             //v1 = new Student();
 
-            string enteredname = " ";
-            Console.WriteLine("please enter students name");
-            enteredname = Console.ReadLine();
+           
 
-            
-            Student[] s = new Student[s];
+
+            Student[] s = new Student[10];
 
             for (int x = 0; x < 10; x = x + 1)
             {
+                s[x] = new Student();
+
+                string enteredname = " ";
+                Console.WriteLine("please enter students name");
+                enteredname = Console.ReadLine();
                 s[x].setName(enteredname);
-                s[x].setIQ(110);                //for now random value
+
+                s[x].setIQ(110);                //for now random value, ask to enter
+
                 s[x].setpredictedGrade("A");    //for now random value
             }
             
@@ -35,3 +40,5 @@ namespace Student.cs
         }
     }
 }
+// s[0] = new Student(enteredname);
+// s[1] = new Student(enteredname);
