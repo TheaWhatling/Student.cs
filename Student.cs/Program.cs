@@ -6,26 +6,32 @@ namespace Student.cs
     {
         static void Main(string[] args)
         {
-            Student v, v1;                   // classes are always capital letters
-            v = new Student(bill, 110);
-            //v.getName();
-            //Console.WriteLine(v);
+            //Student v, v1;                   // classes are always capital letters
 
-            v1 = new Student();
-            //v1.getName();
-            //Console.WriteLine(v1);
+            //v = new Student();
+            //v1 = new Student();
 
-            v.setName("bill");
-            v.setName("ben");
+            string enteredname = " ";
+            Console.WriteLine("please enter students name");
+            enteredname = Console.ReadLine();
 
-            Console.WriteLine(v.getName());
+            
+            Student[] s = new Student[s];
 
-            for(int x = 0; x < 10; x = x + 1)
+            for (int x = 0; x < 10; x = x + 1)
             {
-                v.learn(1);
+                s[x].setName(enteredname);
+                s[x].setIQ(110);                //for now random value
+                s[x].setpredictedGrade("A");    //for now random value
             }
+            
 
-            //Console.WriteLine(v.getName() + "  " + v.predictedGrade());
+            int hoursinput = 0;
+            Console.WriteLine("enter the number of hours " + s[x].getName() + " has worked"); // change so v can change 
+            hoursinput = Convert.ToInt32(Console.ReadLine());
+            s[x].learn(hoursinput);
+
+            Console.WriteLine("student information: " + s[x].print());
         }
     }
 }

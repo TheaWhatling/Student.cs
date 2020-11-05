@@ -8,48 +8,65 @@ namespace Student.cs
     {
         private string name;
         private int IQ;
+        private string predictedGrade; 
 
         public Student()
         {
             name = "bob";
-            IQ = 100;
+            IQ = 0;
+            predictedGrade = " ";
         }
 
         public Student(string name)
         {
             this.name = name;
-            this.IQ = -100; 
+            this.IQ = 0;
+            this.predictedGrade = " ";
         }
 
         public Student(string name, int IQ)
         {
             this.name = name;
             this.IQ = IQ;
+            this.predictedGrade = " ";
         }
 
-        public void gaming(int v)
+        public Student(string name, int IQ, string predictedGrade)
         {
-            IQ = IQ - v;
+            this.name = name;
+            this.IQ = IQ;
+            this.predictedGrade = predictedGrade;
         }
+
+        //public void gaming(int v)
+        //{
+        //    IQ = IQ - v;
+        //}
 
         public void learn(int hours)
         {
             IQ = IQ + hours;
         }
 
-        public void predictedGrade()
+        public void setpredictedGrade(string p)
         {
-            string p;
+            
             p = " ";
 
             if (IQ > 150)
             {
-                p = " A* ";
+                p = "A*";
             }
             else p = "A";
 
+            predictedGrade = p;
+
         }
 
+        public string getpredictedGrade()
+        {
+            return predictedGrade;
+        }
 
         public void setName(string n)
         {
@@ -60,6 +77,24 @@ namespace Student.cs
         {
             return name;
         }
+
+        public void setIQ(int x)
+        {
+            IQ = x;
+        }
+
+        public int getIQ()
+        {
+            return IQ;
+        }
+
+        public void print()
+        {
+            Console.WriteLine("name: " + name);
+            Console.WriteLine("IQ: " + IQ);
+            Console.WriteLine("predicted grade: " + predictedGrade);
+        }
+
     }
 
 }
